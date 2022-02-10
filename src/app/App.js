@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import InputForm from './inputForm/InputForm';
 import OutputContainer from './outputContainer/OutputContainer';
+import TitleBar from './TitleBar';
 
 class App extends React.Component {
     constructor(props) {
@@ -29,6 +30,7 @@ class App extends React.Component {
     render() {
         return (
             <div className="app">
+                <TitleBar />
                 <InputForm handleChange={(event) => this.handleFormChange(event)} handleSubmit={(event) => this.handleFormSubmit(event)} state={this.state} />
                 <OutputContainer state={this.state} />
             </div>
