@@ -10,7 +10,7 @@ function OutputContainer(props) {
         finalValue += props.state.annualContribution;
     }
     
-    finalValue = Math.round(finalValue * 100) / 100;
+    finalValue = Math.round(finalValue);
     
     return (
         <div className="output-container container">
@@ -18,12 +18,12 @@ function OutputContainer(props) {
             
             <div className="output-text-container">
                 <div className="output-label">Total Contributions:</div>
-                <div className="output-text">{props.state.annualContribution * yearsActive}</div>
+                <div className="output-text">$ {props.state.annualContribution * yearsActive}</div>
             </div>
             
             <div className="output-text-container">
                 <div className="output-label">Value at {props.state.retirementAge}:</div>
-                <div className="output-text">{finalValue}</div>
+                <div className="output-text">$ {finalValue}</div>
             </div>
         </div>
     );
