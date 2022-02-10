@@ -23,12 +23,12 @@
 
 /* Changing text highlight */
 ::selection {
-    background: var(--accent);
-    color: var(--bg-1);
+    background: var(--color-mid);
+    color: var(--color-background);
 }
 ::-moz-selection {
-    background: var(--accent);
-    color: var(--bg-1);
+    background: var(--color-mid);
+    color: var(--color-background);
 }
 
 /* Removing arrows on number inputs */
