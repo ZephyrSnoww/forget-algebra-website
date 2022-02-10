@@ -79,7 +79,7 @@ input {
 /* ==================== Actual CSS ==================== */
 
 /* ========== Responsive CSS stuff ========== */
-@media (max-width: 1500px) {
+@media (max-width: 1200px) {
     #root {
         display: none !important;
     }
