@@ -35,10 +35,11 @@
 }
 
 .title-bar-button {
-    color: var(--color-light);
+    color: var(--color-dark);
     transition: 0.25s ease;
+    cursor: pointer;
 }
 
 .title-bar-button:hover {
-    color: var(--color-dark);
+    color: var(--color-light);
 }
