@@ -18,12 +18,12 @@ function OutputContainer(props) {
             
             <div className="output-text-container">
                 <div className="output-label">Total Contributions:</div>
-                <div className="output-text">$ {props.state.annualContribution * yearsActive}</div>
+                <div className="output-text">$ {(props.state.annualContribution * yearsActive).toLocaleString()}</div>
             </div>
             
             <div className="output-text-container">
                 <div className="output-label">Value at {props.state.retirementAge}:</div>
-                <div className="output-text">$ {finalValue}</div>
+                <div className="output-text">$ {(finalValue).toLocaleString()}</div>
             </div>
         </div>
     );
