@@ -18,7 +18,7 @@ class App extends React.Component {
     
     handleFormChange(event) {
         this.setState({
-            [event.target.name]: (isNaN(Number(event.target.value.replace(/,/g, ""))) ? event.target.value : Number(event.target.value.replace(/,/g, "")))
+            [event.target.name]: (isNaN(Number(event.target.value)) ? event.target.value : Number(event.target.value))
         });
     }
     

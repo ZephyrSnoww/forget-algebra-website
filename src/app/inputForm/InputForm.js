@@ -9,14 +9,14 @@ function InputForm(props) {
             {/* Starting balance */}
             <div className="input-container">
                 <div className="input-label">Starting Balance: </div>
-                <input name="startingBalance" onChange={props.handleChange} value={(props.state.startingBalance).toLocaleString()} type="number" placeholder="0" min="0" step="250" />
+                <input name="startingBalance" onChange={props.handleChange} value={props.state.startingBalance} type="number" placeholder="0" min="0" step="250" />
                 <div className="input-unit">$</div>
             </div>
             
             {/* Annual contribution */}
             <div className="input-container">
                 <div className="input-label">Annual Contribution: </div>
-                <input name="annualContribution" onChange={props.handleChange} value={(props.state.annualContribution).toLocaleString()} type="number" placeholder="5500" min="0" step="250" />
+                <input name="annualContribution" onChange={props.handleChange} value={props.state.annualContribution} type="number" placeholder="5500" min="0" step="250" />
                 <div className="input-unit">$</div>
             </div>
             
