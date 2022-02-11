@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './TitleBar.css';
 
 function TitleBar(props) {
@@ -6,8 +7,8 @@ function TitleBar(props) {
         <div className="title-bar">
             <div className="title-bar-title">Roth IRA Calculator</div>
             <div className="title-bar-buttons">
-                <div className="title-bar-button">Home</div>
-                <div className="title-bar-button">Roth IRA Calculator</div>
+                <Link to="/" className="title-bar-button">Home</Link>
+                <Link to="/roth-ira-calculator" className="title-bar-button">Roth IRA Calculator</Link>
             </div>
         </div>
     );

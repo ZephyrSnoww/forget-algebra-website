@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: space-between;
 
-    padding: 10px;
+    padding: 30px;
     box-sizing: border-box;
 
     position: absolute;
@@ -38,8 +38,10 @@
     color: var(--color-dark);
     transition: 0.25s ease;
     cursor: pointer;
+    
+    text-decoration: none;
 }
 
 .title-bar-button:hover {
-    color: var(--color-light);
+    color: var(--color-mid);
 }
