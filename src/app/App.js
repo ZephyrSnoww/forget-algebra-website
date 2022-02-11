@@ -1,7 +1,15 @@
 import React from 'react';
+import {
+	BrowserRouter as Router,
+	Routes,
+	Route
+} from 'react-router-dom';
+
 import './App.css';
-import InputForm from './inputForm/InputForm';
-import OutputContainer from './outputContainer/OutputContainer';
+import Home from './home/Home';
+
+import RothIRACalculator from './rothIRACalculator/RothIRACalculator';
+import TitleBar from './TitleBar';
 
 class App extends React.Component {
     constructor(props) {
@@ -16,22 +24,27 @@ class App extends React.Component {
         };
     }
     
-    handleFormChange(event) {
-        this.setState({
-            [event.target.name]: (isNaN(Number(event.target.value)) ? event.target.value : Number(event.target.value))
-        });
-    }
+    // handleFormChange(event) {
+    //     this.setState({
+    //         [event.target.name]: (isNaN(Number(event.target.value)) ? event.target.value : Number(event.target.value))
+    //     });
+    // }
     
-    handleFormSubmit(event) {
-        console.log(this.state);
-    }
+    // handleFormSubmit(event) {
+    //     console.log(this.state);
+    // }
     
     render() {
         return (
-            <div className="app">
-                <InputForm handleChange={(event) => this.handleFormChange(event)} handleSubmit={(event) => this.handleFormSubmit(event)} state={this.state} />
-                <OutputContainer state={this.state} />
-            </div>
+            <Router>
+                <div className="app">
+                    <TitleBar />
+                    <Routes>
+                        <Route exact path="/" element={<Home />} />
+                        <Route exact path="/roth-ira-calculator" element={<RothIRACalculator />} />
+                    </Routes>
+                </div>
+            </Router>
         );
     }
 }
