@@ -19,8 +19,18 @@ class RothIRACalculator extends React.Component {
     }
     
     handleFormChange(event) {
+        let value = event.target.value;
+        
+        if (!isNaN(Number(value)) && value !== "") {
+            value = Number(value);
+            
+            if (value < 0) {
+                value = Math.abs(value);
+            }
+        }
+        
         this.setState({
-            [event.target.name]: (isNaN(Number(event.target.value)) ? event.target.value : Number(event.target.value))
+            [event.target.name]: value
         });
     }
     
